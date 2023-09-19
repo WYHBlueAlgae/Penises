@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Hide the content initially */
+  .container .content {
+    transform: translateY(100%);
+  }
+  
+  /* Adjust styles when user scrolls down */
+  body.scrolled {
+    height: 80vh;
+  }
+  
+  body.scrolled .container .content {
+    transform: translateY(0);
+  }
+  
