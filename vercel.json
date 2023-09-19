@@ -9,5 +9,12 @@
     "routes": [
       { "src": "/(.*)", "dest": "/main.html" }
     ],
-    "outputDirectory": "build"
+    "outputDirectory": "build",
+    "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "/$1"
+        }
+      ]
 }
+  
